@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет магазин: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -141,6 +142,16 @@
           <section class="contacts__map"></section>
           <button class="contacts__button button" type="button">Напишите нам</button>
         </div>
+      </section>
+      <section class="modal">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__form">
+          <input class="modal__radio" type="radio" name="size" value="s" id="size-id">
+          <input class="modal__radio" type="radio" name="size" value="m" id="size-id">
+          <input class="modal__radio" type="radio" name="size" value="l" id="size-id">
+          <input class="modal__button" type="submit" value="ДОБАВИТЬ">
+        </form>
       </section>
     </main>
     <footer class="page-footer">
