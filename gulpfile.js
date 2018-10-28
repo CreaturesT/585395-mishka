@@ -7,6 +7,16 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
+gulp.task('sass', function () {
+  gulp.src('path/to/input.scss')
+    .pipe(sass({
+      // includePaths: require('node-normalize-scss').with('other/path', 'another/path')
+      // - or -
+      includePaths: require('node-normalize-scss').includePaths
+    }))
+    .pipe(gulp.dest('path/to/output.css'));
+});
+
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
